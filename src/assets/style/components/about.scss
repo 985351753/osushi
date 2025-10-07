@@ -1,0 +1,38 @@
+.about {
+    width: 900px;
+    margin: 0 auto;
+    padding: 180px 0;
+    position: relative;
+}
+.aboutText {
+    margin: 0 auto;
+    padding: 0;
+}
+.aboutText p {
+    font-size: 1.25rem;
+    padding-top: 28px;
+    line-height: 2.5;
+}
+.aboutText a {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 350px;
+    padding: 16px;
+    font-size: 1.5rem;
+    margin-top: 60px;
+    background: rgba(137, 22, 45, 0.8);
+}
+.aboutText a:hover {
+    background: rgba(137, 22, 45);
+}
+.aboutText span {
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid #aaa;
+}

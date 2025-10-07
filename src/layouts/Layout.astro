@@ -1,18 +1,23 @@
+---
+import '../assets/style/style.scss'
+---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<!-- resetCSS -->
+		<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Sushi</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
 		margin: 0;
@@ -27,7 +32,7 @@
     /* 字と字の隙間 */
     font-family: 'しっぽり明朝', serif;
     text-shadow: 1px 1px 2px #222;
-    background-image: url(../images/background.jpg);
+    background-image: url(../assets/images/background.jpg);
     background-size: contain;
     background-repeat: repeat;
 	}
@@ -49,5 +54,10 @@
 	}
 	h1,h2,h3 {
 		font-weight: normal;
+	}
+	.rl-text {
+    /* 縦書き一括設定 */
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
 	}
 </style>

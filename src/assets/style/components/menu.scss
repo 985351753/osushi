@@ -1,0 +1,120 @@
+.menu {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.menu::before {
+    content: url(../images/nami.png);
+    position: absolute;
+    top: 160px;
+    left: -40px;
+    transform: scale(-0.8,0.8);
+}
+.menu h1 {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 80px;
+}
+.menuContent {
+    width: 900px;
+    height: 400px;
+    margin:0 auto 80px;
+    position: relative;
+    /* border: 2px solid #f00 */
+}
+.menuText {
+    max-width: 70%;
+    height: 380px;
+    background-color: #262526;
+    padding: 3% 3% 3% 25%;
+    position: absolute;
+    top: 16px;
+    right: 0;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+}
+.menuText h2 {
+    padding-top: 10px;
+}
+.menuText p {
+    line-height: 2;
+    padding: 24px 0;
+}
+.scale {
+    width: 50%;
+    height: 400px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+.menuImg{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:  0.8s all;
+}
+.menuImg:hover {
+    transform: scale(1.05);
+    transition: 0.8s all;
+}
+.otherMenu {
+    display: block;
+    position: relative;
+    width: 160px;
+    padding: 0.6em;
+    text-align: center;
+    background: #89162D;
+}
+.otherMenu:hover{
+    background: #771212;
+}
+
+.fadeRight{
+    animation-name:fadeRightAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+@keyframes fadeRightAnime{
+    from{
+    opacity: 0;
+    transform: translateX(100px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+.fadeRightTrigger{
+    opacity: 0;
+}
+
+.blur{
+    animation-name:blurAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+@keyframes blurAnime{
+    from {
+    filter: blur(5px);
+    transform: scale(0.9);
+    }
+    to {
+    filter: blur(0);
+    transform: scale(1);
+    }
+}
+.menu-deco::before {
+    content: url(../images/nami.png);
+    position: absolute;
+    right: -120px;
+    bottom: 670px;
+    transform: scale(0.7);
+}
+.menu-deco::after {
+    content: url(../images/nami.png);
+    position: absolute;
+    left: -50px;
+    bottom: -160px;
+    transform: scale(0.7);
+}
