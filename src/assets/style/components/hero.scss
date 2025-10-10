@@ -1,16 +1,54 @@
+.hero {
+    width: 100%;
+    max-height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+.hero__item {
+    width: 100%;
+}
+.hero__picture {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+.hero__img  {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
 
-.scrolldown {
+
+@keyframes zoomUp {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+  }
+  .add-animation {
+      animation: zoomUp 10s linear 0s normal both;
+      /* transform-origin: 50% 50%; */
+    }
+@media screen and (max-width:768px) {
+    .hero__item{
+        height: 100%;
+    }    
+}
+.hero__item-scrolldown {
     position:absolute;
     bottom: 8px;
     left: 8px;
 }
-.scrolldown span {
+.hero__item-scrolldown-text {
     position: absolute;
     left:8px;
     bottom:16px;
     font-size: .875rem;
 }
-.scrolldown:before {
+.hero__item-scrolldown:before {
     content: "";
     position: absolute;
     bottom:0;
@@ -34,7 +72,7 @@
     70% {opacity: 0.5;}
     100% {opacity: 0;}
 }
-.scrolldown:after{
+.hero__item-scrolldown:after{
     content:"";
     position: absolute;
     bottom:0;
@@ -43,26 +81,3 @@
     height: 60px;
     background: #ddd;
 }
-.mainvisualwrapper{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-height: 100vh;
-}
-.mv-img picture {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
-@keyframes zoomUp {
-    0% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1.0);
-    }
-  }
-  .add-animation {
-    animation: zoomUp 10s linear 0s normal both;
-    /* transform-origin: 50% 50%; */
-  }

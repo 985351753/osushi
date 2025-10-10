@@ -7,20 +7,20 @@ import '../assets/style/style.scss'
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
-		<!-- resetCSS -->
+		<!-- CSS -->
 		<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+		<link rel="stylesheet" href="../assets/slick/slick-theme.css">
+		<link rel="stylesheet" href="../assets/slick/slick.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>Sushi</title>
-		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-        <!-- easeScroll -->
-        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="js/jquery.easeScroll.js"></script>
-        <!-- slickJS cdn -->
-        <script src="slick/slick.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-        <!-- myJS -->
-        <script src="js/script.js"></script>
+		<!-- js -->
+		<script is:inline src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script is:inline src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="../assets/scripts/jquery.easeScroll.js"></script>
+        <script src="../assets/slick/slick.min.js"></script>
+        <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+        <script src="../assets/scripts/script.js"></script>
 	</head>
 	<body>
 		<slot />
@@ -42,7 +42,7 @@ import '../assets/style/style.scss'
     /* 字と字の隙間 */
     font-family: 'しっぽり明朝', serif;
     text-shadow: 1px 1px 2px #222;
-    background-image: url(../assets/images/background.jpg);
+    background-image: url(/images/background.jpg);
     background-size: contain;
     background-repeat: repeat;
 	}
@@ -70,4 +70,37 @@ import '../assets/style/style.scss'
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
 	}
+@media screen and (max-width:768px) {
+	body {
+		font-size: 1rem;
+	}
+	.about::after {
+		bottom: -150px;
+		right: -160px;
+		transform: scale(0.4);
+	}
+	.menu::before {
+		top: 80px;
+		left: -150px;
+		transform: scale(-0.3,0.3);
+	}
+	.menu-deco::before {
+		right: -180px;
+		bottom: 310px;
+		transform: scale(0.2);
+	}
+	.menu-deco::after {
+		left: -150px;
+		bottom: -140px;
+		transform: scale(-0.4,0.4);
+	}
+	body.fixed{
+		position: fixed;
+		width:100%;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+}
+
 </style>
