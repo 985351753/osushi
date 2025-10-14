@@ -1,42 +1,32 @@
-.hero {
-    width: 100%;
-    max-height: 80vh;
-    position: relative;
-    overflow: hidden;
-}
-.hero__item {
-    width: 100%;
-}
 .hero__picture {
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: block;
+    transform: scale(1.1);
     }
 .hero__img  {
     width: 100%;
-    height: auto;
+    height: 100vh;
     object-fit: cover;
     display: block;
+    transform: scale(1.03);
 }
-
-
 @keyframes zoomUp {
     0% {
-        transform: scale(1.1);
+        transform: scale(1.03);
     }
     100% {
-        transform: scale(1.0);
+        transform: scale(1);
     }
   }
-  .add-animation {
-      animation: zoomUp 10s linear 0s normal both;
-      /* transform-origin: 50% 50%; */
+  .zoomUp {
+      animation: zoomUp 6s linear forwards;
     }
-@media screen and (max-width:768px) {
-    .hero__item{
-        height: 100%;
-    }    
-}
+// @media screen and (max-width:768px) {
+//     .hero__item{
+//         height: 100%;
+//     }    
+// }
 .hero__item-scrolldown {
     position:absolute;
     bottom: 8px;
@@ -59,8 +49,8 @@
     background:#ddd;
     opacity: 0;
     animation:
-    circlemove 2s ease-in-out infinite backwards,
-    cirlemovehide 2s ease-in infinite backwards;
+    circlemove 2.5s ease-in-out infinite backwards,
+    cirlemovehide 2.5s ease-in infinite backwards;
 }
 @keyframes circlemove {
     0% {bottom: 55px;}

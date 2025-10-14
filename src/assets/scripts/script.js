@@ -1,37 +1,24 @@
 'use strict';
 
-$(document).ready(function(){
-    $('.hero__item')
-    // .on("init", function () {
-    //     $('.slick-slide[data-slick-index="0"]').addClass("add-animation");
-    //   })
-      .slick(
-        {
-        autoplay: true,
-        fade: true,
-        arrows: false,
-        speed: 500,
-        autoplaySpeed: 1000,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        pauseOnDotsHover: false,
-        touchMove: false,
-        waitForAnimate: false,
-      }
-    );
-    //   .on({
-    //     beforeChange: function (event, slick, currentSlide, nextSlide) {
-    //       $(".slick-slide", this).eq(nextSlide).addClass("add-animation");
-    //       $(".slick-slide", this).eq(currentSlide).addClass("remove-animation");
-    //     },
-    //     afterChange: function () {
-    //       $(".remove-animation", this).removeClass(
-    //         "remove-animation add-animation"
-    //       );
-    //     },
-    // });
+import Splide from '@splidejs/splide';
+new Splide( '.splide',{
+  autoplay: true,
+  type: 'fade',
+  arrows: false,
+  interval: 6000,
+  speed: 4000,
+  rewind: true,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+}).on('active', (Slide) => {
+  const targets = Slide.slide.querySelectorAll('.hero__picture, .hero__img');
+  targets.forEach((el) => {
+    el.classList.remove('zoomUp');
+    void el.offsetWidth;
+    el.classList.add('zoomUp');
+  });
+}).mount();
 
-});//slick
 
 const ham = $('.hamburger');
 const nav = $('.wrapper');

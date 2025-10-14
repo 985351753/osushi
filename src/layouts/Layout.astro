@@ -1,5 +1,6 @@
 ---
 import '../assets/style/style.scss'
+import '@splidejs/splide/css';
 ---
 <!doctype html>
 <html lang="en">
@@ -9,15 +10,12 @@ import '../assets/style/style.scss'
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<!-- CSS -->
 		<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-		<link rel="stylesheet" href="../assets/slick/slick-theme.css">
-		<link rel="stylesheet" href="../assets/slick/slick.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>Sushi</title>
 		<!-- js -->
 		<script is:inline src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
         <script is:inline src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="../assets/scripts/jquery.easeScroll.js"></script>
-        <script src="../assets/slick/slick.min.js"></script>
         <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
         <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
         <script src="../assets/scripts/script.js"></script>
@@ -35,16 +33,17 @@ import '../assets/style/style.scss'
 		height: 100%;
 	}
 	body {
-    background: #333;
-    color: #eee;
-    font-size: 1.125rem;
-    letter-spacing: .07rem;
-    /* 字と字の隙間 */
-    font-family: 'しっぽり明朝', serif;
-    text-shadow: 1px 1px 2px #222;
-    background-image: url(/images/background.jpg);
-    background-size: contain;
-    background-repeat: repeat;
+		background: #333;
+		color: #eee;
+		font-size: 1.125rem;
+		letter-spacing: .07rem;
+		/* 字と字の隙間 */
+		font-family: 'しっぽり明朝', serif;
+		text-shadow: 1px 1px 2px #222;
+		background-image: url(/images/background.jpg);
+		background-size: contain;
+		background-repeat: repeat;
+		overflow-x: hidden;
 	}
 	img {
 		max-width: 100%;
