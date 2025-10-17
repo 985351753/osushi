@@ -20,8 +20,8 @@ new Splide( '.splide',{
 }).mount();
 
 
-const ham = $('.hamburger');
-const nav = $('.wrapper');
+const ham = $('.header__menu-button');
+const nav = $('.header__nav');
 var state = false;
 var scrollpos;
 ham.on('click', function () {
