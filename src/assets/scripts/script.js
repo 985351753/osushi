@@ -101,7 +101,7 @@ $(window).on('load', function () {
 gsap.utils.toArray(".title").forEach((title) => {
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: title,  // 各タイトルをトリガーにする
+      trigger: title,
       start: "top 80%", 
       markers: false
     }
@@ -113,8 +113,8 @@ gsap.utils.toArray(".title").forEach((title) => {
     y: 40,
     duration: 1,
     ease: "power3.out",
-    delay: i * 0.2   // 0.3 秒ずつずらす
-  }, "<"); // "<" で前のアニメ直後からスタート
+    delay: i * 0.2
+  }, "<");
   });
   
   tl.from(title.querySelector(".text"), { opacity: 0, y: 40, duration: 1, ease: "power3.out" })

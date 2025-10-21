@@ -4,16 +4,16 @@
     padding: 180px 0;
     position: relative;
 }
-.aboutText {
+.about__item {
     margin: 0 auto;
     padding: 0;
 }
-.aboutText p {
+.about__text {
     font-size: 1.25rem;
     padding-top: 28px;
     line-height: 2.5;
 }
-.aboutText a {
+.about__button {
     position: relative;
     display: block;
     text-align: center;
@@ -23,10 +23,10 @@
     margin-top: 60px;
     background: rgba(137, 22, 45, 0.8);
 }
-.aboutText a:hover {
+.about__button:hover {
     background: rgba(137, 22, 45);
 }
-.aboutText span {
+.about__button-deco {
     display: block;
     height: 0;
     width: 0;
@@ -35,4 +35,30 @@
     right: 2px;
     border-left: 15px solid transparent;
     border-bottom: 15px solid #aaa;
+}
+/* ---sp-about--- */
+@media screen and (max-width:768px) {
+    .about {
+        width: 90%;
+        position: relative;
+    }
+    .about__item {
+        align-items:center;
+    }
+    .about__text {
+        font-size: initial;
+        flex: 1 1 50%;
+        padding-top: 0;
+        line-height: 2;
+    }
+    .about__button {
+        width: 250px;
+        height: auto;
+        flex: 0 1 auto;
+        padding: 8px 16px;
+        margin-top: 40px;
+        font-size: initial;
+        -ms-writing-mode: horizontal-tb;
+        writing-mode: horizontal-tb;
+    }
 }
