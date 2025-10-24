@@ -11,17 +11,17 @@
     display: block;
     transform: scale(1.03);
 }
-@keyframes zoomUp {
-    0% {
-        transform: scale(1.03);
-    }
-    100% {
-        transform: scale(1);
-    }
+.zoomUp {
+    animation: zoomUp 6s linear forwards;
   }
-  .zoomUp {
-      animation: zoomUp 6s linear forwards;
-    }
+  @keyframes zoomUp {
+  0% {
+      transform: scale(1.03);
+  }
+  100% {
+      transform: scale(1);
+  }
+  }
 // @media screen and (max-width:768px) {
 //     .hero__item{
 //         height: 100%;
