@@ -1,6 +1,8 @@
 'use strict';
 
 import Splide from '@splidejs/splide';
+import gsap from 'gsap';
+
 new Splide( '.splide',{
   autoplay: true,
   type: 'fade',
