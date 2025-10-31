@@ -1,7 +1,9 @@
-@use "./components/header.scss";
-@use "./components/hero.scss";
-@use "./components/about.scss";
-@use "./components/menu.scss";
-@use "./components/news.scss";
-@use "./components/info.scss";
-@use "./components/footer.scss";
+@use "./components/layout/header.scss";
+@use "./components/home-page/hero.scss";
+@use "./components/home-page/about.scss";
+@use "./components/home-page/menu.scss";
+@use "./components/home-page/news.scss";
+@use "./components/home-page/info.scss";
+@use "./components/layout/footer.scss";
+@use "./components/layout/head.scss";
+@use "./components/about-page/about-contents.scss";

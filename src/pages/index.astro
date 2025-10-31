@@ -1,21 +1,16 @@
 ---
-// import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/toppage/header.astro';
-import Hero from '../components/toppage/hero.astro';
-import About from '../components/toppage/about.astro';
-import Menu from '../components/toppage/menu.astro';
-import News from '../components/toppage/news.astro';
-import StoreInformation from '../components/toppage/info.astro';
-import Footer from '../components/toppage/footer.astro';
+import Header from '../components/layout/header.astro';
+import Hero from '../components/home-page/hero.astro';
+import About from '../components/home-page/about.astro';
+import Menu from '../components/home-page/menu.astro';
+import News from '../components/home-page/news.astro';
+import StoreInformation from '../components/home-page/info.astro';
+import Footer from '../components/layout/footer.astro';
 
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<!-- <Welcome /> -->
 	<Header />
 	<Hero />
 	<About />
@@ -23,4 +18,6 @@ import Footer from '../components/toppage/footer.astro';
 	<News />
 	<StoreInformation />
 	<Footer />
+
+	<script type="module" src="/src/scripts/index.js"></script>
 </Layout>
