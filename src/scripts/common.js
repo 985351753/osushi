@@ -1,6 +1,9 @@
 'use strict';
 
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 
 const ham = $('.header__menu-button');
 const nav = $('.header__nav');
@@ -85,7 +88,7 @@ gsap.utils.toArray(".title").forEach((title) => {
     scrollTrigger: {
       trigger: title,
       start: "top 80%", 
-      markers: false
+      markers: true
     }
   });
 
