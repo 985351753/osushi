@@ -5,5 +5,9 @@
 @use "./components/home-page/news.scss";
 @use "./components/home-page/info.scss";
 @use "./components/layout/footer.scss";
-@use "./components/layout/head.scss";
+@use "./components/about-page/about-head.scss";
 @use "./components/about-page/about-contents.scss";
+@use "./components/menu-page/menu-head.scss";
+@use "./components/menu-page/menu-contents.scss";
+@use "./components/news-page/news-head.scss";
+@use "./components/news-page/news-contents.scss";

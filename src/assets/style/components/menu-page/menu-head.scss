@@ -1,0 +1,40 @@
+.menu__head-img {
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/menutop.jpg);
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(black 30%, transparent);
+    mask-image: linear-gradient(black 30%, transparent);
+}
+
+.menu__head-title {
+    position: absolute;
+    z-index: 1;
+    top: 220px;
+    left: 50%;
+}
+.menu__head-title-text {
+    display: block;
+    transform: translateX(-50%);
+}
+
+
+@media screen and (max-width:768px) {
+.menu__head-img {
+    height: 300px;
+}
+
+.menu__head-title {
+    top: 140px;
+}
+.menu__head-title {
+    left: calc((100vw - 210px) / 2);
+}
+.menu__head-title-text {
+    width: 210px;
+    text-align: center;
+    transform: translateX(0%);
+}
+
+}
