@@ -1,3 +1,6 @@
+// @@@
+// クラスにstyleをふる。.headerでいいのでクラスをつけましょう。
+//
 header {
     position: relative;
     z-index: 11;
@@ -36,6 +39,10 @@ header {
     display: block;
     line-height: 2.8;
 }
+
+// @@@
+// 擬似要素は入れ子にしても検索できるので入れ子にしても大丈夫です。これでも大丈夫
+//
 .header__nav-item-text::before {
     content: '';
     position: absolute;
@@ -116,6 +123,10 @@ header {
     display: inline-block;
     padding-top: 16px;
 }
+
+// @@@
+// アニメーションは別のファイルにまとめてもいいかもです。ここでも大丈夫です
+//
 /* 左の動き */
 .appBtn.LeftMove {
 animation: LeftAnime 1s forwards;
