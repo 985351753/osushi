@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-
+//　@@@ js用はjs-などjsでのみ使用するクラスを付与してそれをつかいましょう。
 const ham = $('.header__menu-button');
 const nav = $('.header__nav');
 var state = false;
