@@ -1,4 +1,4 @@
-header {
+.header {
     position: relative;
     z-index: 11;
 }
@@ -35,8 +35,8 @@ header {
     position: relative;
     display: block;
     line-height: 2.8;
-}
-.header__nav-item-text::before {
+
+    &::before {
     content: '';
     position: absolute;
     width: 1px;
@@ -47,9 +47,10 @@ header {
     transform-origin: center top;
     transform: scale(1, 0);
     transition: 0.3s all ease-in-out;
-}
-.header__nav-item-text:hover::before {
-    transform: scale(1, 1);
+    }
+    &:hover::before {
+        transform: scale(1, 1);
+    }
 }
 .header__button-pc {
     display: block;
@@ -62,9 +63,9 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-}
-.header__button-pc:hover {
-    background: #660F1D;
+    &:hover {
+        background: #660F1D;
+    }
 }
 .header__sidenav {
     display: inline-block;
@@ -79,8 +80,8 @@ header {
     display: inline-block;
     padding-bottom: 6px;
     position: relative;
-}
-.header__sidenav-item-text::before {
+
+    &::before {
     content: '';
     position: absolute;
     width: 1px;
@@ -91,10 +92,12 @@ header {
     transform-origin: center center;
     transform: scale(1, 0);
     transition: 0.3s all ease-in-out;
-}
-.header__sidenav-item-text:hover::before {
+    }
+    &:hover::before {
     transform: scale(1, 1);
+    }
 }
+
 .header__item-back {
     display: block;
     width: 60px;
@@ -108,41 +111,13 @@ header {
     z-index: 11;
     opacity: 0;
     transform: translateX(100px);
-}
-.header__item-back:hover {
-    background: #771212;
+    &:hover {
+        background: #771212;
+    }
 }
 .header__item-back-text {
     display: inline-block;
     padding-top: 16px;
-}
-/* 左の動き */
-.appBtn.LeftMove {
-animation: LeftAnime 1s forwards;
-}
-@keyframes LeftAnime{
-from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-/* 右の動き */
-.appBtn.RightMove {
-animation: RightAnime 1.5s forwards;
-}
-    @keyframes RightAnime{
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(100px);
-    }
 }
 
 /* ---sp-header--- */
@@ -207,16 +182,16 @@ animation: RightAnime 1.5s forwards;
     .header__menu-icon:nth-of-type(3) {
         top:32px;
     }
-    .header__menu-button.active .header__menu-icon:nth-of-type(1) {
+    .js-hamburger-button.active .header__menu-icon:nth-of-type(1) {
         top: 18px;
         left: 14px;
         transform: translateY(6px) rotate(-45deg);
         width: 50%;
     }
-    .header__menu-button.active .header__menu-icon:nth-of-type(2) {
+    .js-hamburger-button.active .header__menu-icon:nth-of-type(2) {
         opacity: 0;
     }
-    .header__menu-button.active .header__menu-icon:nth-of-type(3){
+    .js-hamburger-button.active .header__menu-icon:nth-of-type(3){
         top: 30px;
         left: 14px;
         transform: translateY(-6px) rotate(45deg);
@@ -248,11 +223,11 @@ animation: RightAnime 1.5s forwards;
         width: 56px;
         padding: 0;
         font-size: 1.25rem;
+        &::before {
+            display: none;
+        }
     }
-    .header__nav-item-text::before {
-        display: none;
-    }
-    .header__nav.active {
+    .js-header__nav.active {
         pointer-events: auto;
         opacity: 1;
     }
@@ -267,9 +242,9 @@ animation: RightAnime 1.5s forwards;
         height: 50px;
         bottom: 16px;
         right: 8px;
-    }
-    .header__item-back:hover {
-        background: transparent;
+        &:hover {
+            background: transparent;
+        }
     }
     .header__item-back:active {
         background: #771212;

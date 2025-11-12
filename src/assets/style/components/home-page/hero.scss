@@ -31,6 +31,29 @@
     position:absolute;
     bottom: 8px;
     left: 8px;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:8px;
+        height:8px;
+        border-radius: 50%;
+        background:#ddd;
+        opacity: 0;
+        animation:
+        circlemove 2.5s ease-in-out infinite backwards,
+        cirlemovehide 2.5s ease-in infinite backwards;
+    }
+    &::after{
+        content:"";
+        position: absolute;
+        bottom:0;
+        left:4px;
+        width:1px;
+        height: 60px;
+        background: #ddd;
+    }
 }
 .hero__item-scrolldown-text {
     position: absolute;
@@ -38,20 +61,7 @@
     bottom:16px;
     font-size: .875rem;
 }
-.hero__item-scrolldown:before {
-    content: "";
-    position: absolute;
-    bottom:0;
-    left:0;
-    width:8px;
-    height:8px;
-    border-radius: 50%;
-    background:#ddd;
-    opacity: 0;
-    animation:
-    circlemove 2.5s ease-in-out infinite backwards,
-    cirlemovehide 2.5s ease-in infinite backwards;
-}
+
 @keyframes circlemove {
     0% {bottom: 55px;}
     100% {bottom: -5px;}
@@ -61,13 +71,4 @@
     50% {opacity: 1;}
     70% {opacity: 0.5;}
     100% {opacity: 0;}
-}
-.hero__item-scrolldown:after{
-    content:"";
-    position: absolute;
-    bottom:0;
-    left:4px;
-    width:1px;
-    height: 60px;
-    background: #ddd;
 }

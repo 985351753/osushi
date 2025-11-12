@@ -1,7 +1,7 @@
-#lunch,#dinner,#drink,#course {
+.menu__group {
     padding-bottom: 60px;
 }
-.menu__contents-group {
+.menu__contents {
     width: 80%;
     margin: 0 auto;
     position: relative;
@@ -23,9 +23,9 @@
     padding: 10px;
     font-size: 1.5rem;
     background: rgba(137, 22, 45, 0.8);
-}
-.menu__nav-item:hover {
-    background: rgba(119, 18, 18, 0.8);
+    &:hover {
+        background: rgba(119, 18, 18, 0.8);
+    }
 }
 .menu__nav-item-span {
     display: block;
@@ -104,14 +104,14 @@
     justify-content: space-between;
     margin: 5px 0;
     padding: 5px 0;
-}
-.drink__list-wrap::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    border-bottom: dotted 1px #eee;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        border-bottom: dotted 1px #eee;
+    }
 }
 .drink__list-term {
     margin: 0;
@@ -165,10 +165,10 @@
     font-size: 1.5rem;
 }
 @media screen and (max-width:768px) {
-    #lunch,#dinner,#drink,#course {
+    .menu__group {
         padding-bottom: 20px;
     }
-    .menu__contents-group {
+    .menu__contents {
         width: 80%;
         margin: 0 auto;
     }
@@ -245,14 +245,14 @@
         justify-content: space-between;
         margin: 5px 0;
         padding: 5px 0;
-    }
-    .drink__list-wrap::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        border-bottom: dotted 1px #fff;
+        &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 50%;
+            width: 100%;
+            border-bottom: dotted 1px #fff;
+        }
     }
     .drink__list-term {
         margin: 0;

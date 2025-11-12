@@ -2,13 +2,13 @@
     padding-top: 20px;
     position: relative;
     width: 100%;
-}
-.info::before {
-    content: url(../images/nami.png);
-    position: absolute;
-    bottom: -100px;
-    right: -100px;
-    transform: scale(0.7);
+    &::before {
+        content: url(../images/nami.png);
+        position: absolute;
+        bottom: -100px;
+        right: -100px;
+        transform: scale(0.7);
+    }
 }
 .info__img {
     width: 100%;
@@ -31,9 +31,9 @@
 @media screen and (max-width:768px) {
     .info {
         padding: 60px 0 0;
-    }
-    .info::before {
-        display: none;
+        &::before {
+            display: none;
+        }
     }
     .info__img {
         width: 100%;
