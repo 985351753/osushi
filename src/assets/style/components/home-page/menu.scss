@@ -28,10 +28,10 @@
     top: 0;
     left: 0;
     transition:  0.8s all;
-}
-.menu__img-link:hover {
-    transform: scale(1.05);
-    transition: 0.8s all;
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.8s all;
+    }
 }
 .menu__unit {
     max-width: 70%;
@@ -57,9 +57,9 @@
     padding: 0.6em;
     text-align: center;
     background: #89162D;
-}
-.menu__unit-button:hover {
-    background: #771212;
+    &:hover {
+        background: #771212;
+    }
 }
 // sp-menu
 @media screen and (max-width:768px) {

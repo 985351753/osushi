@@ -22,9 +22,9 @@
     font-size: 1.5rem;
     margin-top: 60px;
     background: rgba(137, 22, 45, 0.8);
-}
-.about__button:hover {
-    background: rgba(137, 22, 45);
+    &:hover {
+        background: rgba(137, 22, 45);
+    }
 }
 .about__button-deco {
     display: block;
