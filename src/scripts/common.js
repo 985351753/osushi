@@ -88,7 +88,7 @@ gsap.utils.toArray(".js-title").forEach((title) => {
     scrollTrigger: {
       trigger: title,
       start: "top 80%", 
-      markers: true
+      markers: false
     }
   });
 

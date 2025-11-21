@@ -29,17 +29,41 @@ import "@splidejs/splide/css";
 		width: 100%;
 		height: 100%;
 	} */
+	 :root{
+		--spacing: .25rem;
+		/* 4*8=32,*15=60,*25=100,*30=120 */
+    --text-xs: .75rem;
+    --text-xs--line-height: calc(1 / .75);
+    --text-sm: .875rem;
+    --text-sm--line-height: calc(1.25 / .875);
+    --text-base: 1rem;
+    --text-base--line-height: 1.5;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: 1.2;
+    --text-4xl: 2.25rem;
+		--text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+	 }
 	body {
 		background: #333;
 		color: #eee;
-		font-size: 1.125rem;
-		letter-spacing: .07rem;
+		letter-spacing: .07em;
 		font-family: 'しっぽり明朝', serif;
 		text-shadow: 1px 1px 2px #222;
 		background-image: url(/images/background.jpg);
 		background-size: contain;
 		background-repeat: repeat;
 		overflow-x: hidden;
+		margin-bottom: calc(var(--spacing) * 24);
 	}
 	img {
 		max-width: 100%;
@@ -54,13 +78,13 @@ import "@splidejs/splide/css";
 		text-shadow: 1px 1px 1px #222;
 	}
 	h1 {
-		font-size: 2rem;
-		letter-spacing: .5rem;
+		font-size: var(--text-3xl);
 	}
 	h1,
 	h2,
 	h3 {
 		font-weight: normal;
+		letter-spacing: .2em;
 	}
 	.rl-text {
     /* 縦書き一括設定 */
@@ -152,14 +176,14 @@ import "@splidejs/splide/css";
 
 @media screen and (max-width:768px) {
 	body {
-		font-size: 1rem;
+		margin-bottom: calc(var(--spacing) * 12);
 	}
 	body.fixed {
 		position: fixed;
 		width: 100%;
 	}
 	h1 {
-		font-size: 1.5rem;
+		font-size: var(--text-2xl);
 	}
 }
 </style>

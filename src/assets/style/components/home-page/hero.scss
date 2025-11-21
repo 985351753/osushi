@@ -59,7 +59,7 @@
     position: absolute;
     left:8px;
     bottom:16px;
-    font-size: .875rem;
+    font-size: var(--text-sm);
 }
 
 @keyframes circlemove {

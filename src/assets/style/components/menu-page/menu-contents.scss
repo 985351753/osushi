@@ -1,5 +1,5 @@
 .menu__group {
-    padding-bottom: 60px;
+    margin-bottom: calc(var(--spacing) * 15);
 }
 .menu__contents {
     width: 80%;
@@ -20,8 +20,8 @@
     text-align: center;
     width: 22%;
     height: auto;
-    padding: 10px;
-    font-size: 1.5rem;
+    padding: calc(var(--spacing) * 2);
+    font-size: var(--text-lg);
     background: rgba(137, 22, 45, 0.8);
     &:hover {
         background: rgba(119, 18, 18, 0.8);
@@ -39,11 +39,11 @@
 }
 .menu__contents-heading {
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: calc(var(--spacing) * 30);
 }
 .menu__contents-text {
     text-align: center;
-    padding: 60px 0;
+    padding: calc(var(--spacing) * 15) 0;
 }
 
 /* ---lunch--- */
@@ -51,7 +51,6 @@
     height: auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
 }
 .lunch__contents-item {
     width: 30%;
@@ -59,15 +58,19 @@
 .lunch__contents-text {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: calc(var(--spacing) * 3) 0;
 }
 /* ---dinner--- */
 .dinner__contents {
     height: auto;
-    margin: 0 auto;
-    padding-bottom: 40px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0;
+}
+.dinner__contents-text {
+    display: flex;
+    justify-content: space-between;
+    padding: calc(var(--spacing) * 3) 0;
 }
 .dinner__contents-item__large {
     width: 48%;
@@ -75,54 +78,47 @@
 .dinner__contents-item__small {
     width: 30%;
 }
-.dinner__contents-text {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-}
 
 /* ---drink--- */
 .drink__contents {
     height: auto;
     margin: 0 auto;
-    padding: 20px 40px 40px;
+    padding: calc(var(--spacing) * 8);
     background: #222;
     display: flex;
     position: relative;
     justify-content: space-around;
-    margin-bottom: 60px;
 }
 .drink__contents-item {
     width: 40%;
 }
 .drink__contents-item-heading {
-    margin-top: 30px;
+    margin-top: calc(var(--spacing) * 8);
 }
 .drink__list-wrap {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin: 5px 0;
-    padding: 5px 0;
+    padding: calc(var(--spacing) * 2) 0;
     &::after {
         content: "";
         display: block;
         position: absolute;
         top: 50%;
         width: 100%;
-        border-bottom: dotted 1px #eee;
+        border-bottom: dotted 1px #aaa;
     }
 }
 .drink__list-term {
     margin: 0;
-    padding: 0 5px 0 0;
+    padding: 0 calc(var(--spacing) * 2) 0 0;
     z-index: 1;
     background-color: #222;
     text-align-last: left;
 }
 .drink__list-description {
     margin: 0;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 calc(var(--spacing) * 2);
     z-index: 1;
     background-color: #222;
     text-align: right;
@@ -144,41 +140,27 @@
 .course__contents-item {
     /* position: absolute; */
     width: 40%;
-    margin-top: 80px;
+    margin-top: calc(var(--spacing) * 20);
     margin-left: auto;
-    margin-right: 110px;
+    margin-right: calc(var(--spacing) * 27);
     line-height: 2.5;
     z-index: 11;
 }
 .course__contents-item-menu {
-    /* position: relative; */
-    padding-top: 40px;
-    padding-left: 20px;
-    margin-left: auto;
+    padding-top: calc(var(--spacing) * 10);
+    padding-left: calc(var(--spacing) * 5);
 }
 .course__contents-item-text {
-    padding-bottom: 30px;
+    padding-bottom: calc(var(--spacing) * 7);
     position: relative;
 }
 .course__contents-menu-span {
-    padding-right: 30px;
-    font-size: 1.5rem;
+    padding-right: calc(var(--spacing) * 7);
+    font-size: var(--text-2xl);
 }
 @media screen and (max-width:768px) {
     .menu__group {
-        padding-bottom: 20px;
-    }
-    .menu__contents {
-        width: 80%;
-        margin: 0 auto;
-    }
-    .menu__contents-heading {
-        font-size: 1.25rem;
-        margin: 0 auto;
-        padding-top: 80px;
-    }
-    .menu__contents-text {
-        padding: 40px 0;
+        margin-bottom: calc(var(--spacing) * 5);
     }
     .menu__nav {
         top: -20px;
@@ -188,113 +170,59 @@
     }
     .menu__nav-item {
         width: 47%;
-        padding: 6px;
-        font-size: 1rem;
-        margin-bottom: 12px;
+        margin-bottom: calc(var(--spacing) * 2);
     }
     .enu__nav-item-span {
         border-left: 6px solid transparent;
         border-bottom: 6px solid #aaa;
     }
-
+    .menu__contents-heading {
+        font-size: var(--text-xl);
+    }
     /* ---lunch--- */
     .lunch__contents {
         flex-direction: column;
-        margin-bottom: 0px;
     }
     .lunch__contents-item {
         width: 100%;
-        margin-bottom: 20px;
-    }
-    .lunch__contents-text {
-        padding: 8px 0 16px 0;
+        margin-bottom: calc(var(--spacing) * 8);
     }
     /* ---dinner--- */
     .dinner__contents {
-        padding-bottom: 0;
         flex-direction: column;
     }
     .dinner__contents-item__large {
         width: 100%;
-        margin-bottom: 20px;
-    }
-    .dinner__contents-text {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 0 16px 0;
+        margin-bottom: calc(var(--spacing) * 8);
     }
     .dinner__contents-item__small {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: calc(var(--spacing) * 8);
     }
     /* ---drink--- */
     .drink__contents {
         flex-direction: column;
-        padding: 0px 20px 20px;
-        margin-bottom: 0;
+        padding: calc(var(--spacing) * 4);
     }
     .drink__contents-item {
         width: 100%;
     }
-    .drink__contents-item-heading {
-        margin-top: 20px;
-    }
-    .drink__list-wrap {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        margin: 5px 0;
-        padding: 5px 0;
-        &::after {
-            display: block;
-            position: absolute;
-            content: "";
-            top: 50%;
-            width: 100%;
-            border-bottom: dotted 1px #fff;
-        }
-    }
-    .drink__list-term {
-        margin: 0;
-        padding: 0 5px 0 0;
-        z-index: 1;
-        background-color: #222;
-        text-align-last: left;
-    }
-    .drink__list-description {
-        margin: 0;
-        padding: 0 0 0 5px;
-        z-index: 1;
-        background-color: #222;
-        text-align: right;
-    }
     /* ---course--- */
-    .course__contents {
-        display: flex;
-        flex-direction: column-reverse;
-    }
     .course__contents-img {
         position: relative;
         width: 100%;
-        bottom: 0px;
-        left: 0px;
+        bottom: 0;
+        left: 0;
     }
     .course__contents-item {
         width: 80%;
-        margin: 40px auto 0;
+        margin:  calc(var(--spacing) * 10) auto 0;
         line-height: 2;
     }
     .course__contents-item-menu {
-        padding-top: 40px;
         padding-left: 0;
     }
-    .course__contents-item-menu-text {
-        padding-bottom: 20px;
-        /* text-align: right; */
-        position: relative;
-    }
     .course__contents-menu-span {
-        padding-right: 30px;
-        font-size: 1.3rem;
+        font-size: var(--text-xl);
     }
 }

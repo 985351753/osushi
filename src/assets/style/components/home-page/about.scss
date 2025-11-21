@@ -1,16 +1,11 @@
 .about {
     width: 900px;
-    margin: 0 auto;
-    padding: 180px 0;
+    margin: calc(var(--spacing) * 40) auto;
     position: relative;
 }
-.about__item {
-    margin: 0 auto;
-    padding: 0;
-}
 .about__text {
-    font-size: 1.25rem;
-    padding-top: 28px;
+    font-size: var(--text-lg);
+    padding-top: calc(var(--spacing) * 12);
     line-height: 2.5;
 }
 .about__button {
@@ -18,9 +13,9 @@
     display: block;
     text-align: center;
     width: 350px;
-    padding: 16px;
-    font-size: 1.5rem;
-    margin-top: 60px;
+    padding: calc(var(--spacing) * 4);
+    font-size: var(--text-2xl);
+    margin-top: calc(var(--spacing) * 20);
     background: rgba(137, 22, 45, 0.8);
     &:hover {
         background: rgba(137, 22, 45);
@@ -40,24 +35,22 @@
 @media screen and (max-width:768px) {
     .about {
         width: 90%;
-        position: relative;
+        margin: calc(var(--spacing) * 30) auto;
     }
     .about__item {
-        align-items:center;
+        align-items: center;
     }
     .about__text {
-        font-size: initial;
+        font-size: var(--text-base);
         flex: 1 1 50%;
-        padding-top: 0;
-        line-height: 2;
     }
     .about__button {
         width: 250px;
         height: auto;
         flex: 0 1 auto;
-        padding: 8px 16px;
-        margin-top: 40px;
-        font-size: initial;
+        padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+        margin-top: calc(var(--spacing) * 15);
+        font-size: var(--text-base);
         -ms-writing-mode: horizontal-tb;
         writing-mode: horizontal-tb;
     }
