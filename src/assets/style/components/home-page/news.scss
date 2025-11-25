@@ -1,7 +1,7 @@
 .news {
-    width: 800px;
-    height: auto;
+    max-width: calc(var(--spacing) * 200);
     margin: calc(var(--spacing) * 40) auto;
+    height: auto;
     position: relative;
 }
 .news__heading {
@@ -50,11 +50,11 @@
 }
 @media screen and (max-width:768px) {
     .news {
-        width: 90%;
+        width: calc(100% - var(--LAYOUT-MARGIN-INLINE) * 2);
+        margin: calc(var(--spacing) * 30) auto;
         display: block;
     }
     .news__heading {
-        width: auto;
         margin-bottom: calc(var(--spacing) * 15);
     }
     .news__unit {

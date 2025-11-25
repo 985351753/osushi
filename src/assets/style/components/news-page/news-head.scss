@@ -1,6 +1,6 @@
 .news__head-img {
     width: 100%;
-    height: 500px;
+    height: calc(var(--spacing) * 125);
     background-image: url(../images/newstop.jpg);
     background-size: cover;
     background-position: center;
@@ -11,7 +11,7 @@
 .news__head-title {
     position: absolute;
     z-index: 1;
-    top: 220px;
+    top: calc(var(--spacing) * 55);
     left: 50%;
 }
 .news__head-title-text {
@@ -22,11 +22,11 @@
 
 @media screen and (max-width:768px) {
 .news__head-img {
-    height: 300px;
+    height: calc(var(--spacing) * 75);
 }
 
 .news__head-title {
-    top: 140px;
+    top: calc(var(--spacing) * 35);
 }
 .news__head-title {
     left: calc((100vw - 210px) / 2);
