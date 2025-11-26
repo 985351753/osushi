@@ -146,3 +146,33 @@ if(ua.indexOf("iPhone") === -1 && ua.indexOf("Android") === -1) {
       e.preverntDefault();
     });
 }/* tel */
+
+class InView {
+  constructor(elTarget) {
+    this.elTarget = elTarget;
+    this._setEventListeners();
+  }
+
+  _setEventListeners() {
+    setTimeout(() => {
+      const rootMargin = this.elTarget.dataset.rootMargin || '0px';
+      const iObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.elTarget.classList.add('is-active');
+              iObserver.unobserve(this.elTarget);
+            }
+          });
+        },
+        { rootMargin: rootMargin }
+      );
+      iObserver.observe(this.elTarget);
+    }, 500);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.js-inview');
+  elements.forEach(element => new InView(element));
+});

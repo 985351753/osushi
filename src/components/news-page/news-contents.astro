@@ -1,35 +1,91 @@
-<section class="aboutContent">
-    <div class="about__item__reverse js-fadeUpTrigger">
-        <img src="images/fish.png" alt="魚の写真" class="about__img">
-        <div class="about__heading">
-            <h2 class="about__heading-text">仕入れのこだわり</h2>
-            <p class="about__body-text">
-            ネタの鮮度に徹底的にこだわります。<br>毎朝、東京中央卸売市場で、新鮮な魚介類を仕入れます。<br>その日のお客様の注文に合わせて、<br>最適な状態で調理することを心がけています。</p>
-        </div>
+
+  <body>
+    <div class="hero">
+      <div>
+        <h1>InView Component</h1>
+        <p>スクロールして要素が画面内に入るとアニメーションが発動します</p>
+      </div>
     </div>
-    <div class="about__item__forward js-fadeUpTrigger">
-        <img src="images/rise.jpg" alt="お米の写真" class="about__img">
-        <div class="about__heading">
-            <h2 class="about__heading-text">シャリのこだわり</h2>
-            <p class="about__body-text">
-            厳選された最高級の米を使用し、<br>炊き上げる際にも、水の質や火加減にも<br>細心の注意を払います。<br>寿司の味を左右する重要な要素の一つとなっています。</p>
+  
+    <div class="container">
+      <section class="section">
+        <div class="box fadeup js-inview" data-root-margin="0px">
+          <h2>基本のフェードアップ</h2>
+          <p>この要素は画面内に入ると下から上へフェードインします。</p>
         </div>
-    </div>
-    <div class="about__item__reverse js-fadeUpTrigger">
-        <img src="images/itamae_small.jpg" alt="板前の写真" class="about__img">
-        <div class="about__heading">
-            <h2 class="about__heading-text">職人のこだわり</h2>
-            <p class="about__body-text">
-            寿司を握る際の手の動きや力加減、ネタとシャリの<br>バランスなど、細かい部分にまで注意を払い、<br>一つ一つ丁寧に仕上げます。<br>お客様に最高の味わいを提供するために欠かせない技術です。
-            </p>
+  
+        <div class="box slideleft js-inview" data-root-margin="0px">
+          <h2>左からスライドイン</h2>
+          <p>左側から滑らかにスライドしながら登場します。</p>
         </div>
-    </div>
-    <div class="about__item__forward js-fadeUpTrigger">
-        <img src="images/alcohol-2.jpeg" alt="お酒の写真" class="about__img">
-        <div class="about__heading">
-            <h2 class="about__heading-text">組み合わせのこだわり</h2>
-            <p class="about__body-text">当店ではお客様に自由にお酒と寿司をお愉しみいただきたいと考えております。<br>
-            お客様のお好みに合わせた飲み物のペアリングも可能です。日本酒やワイン、ビールなど、豊富なドリンクメニューと共に、当店自慢の料理をお楽しみください。</p>
+  
+        <div class="box slideright js-inview" data-root-margin="0px">
+          <h2>右からスライドイン</h2>
+          <p>右側からスライドインします。</p>
         </div>
+  
+        <div class="box scaleup js-inview" data-root-margin="-100px">
+          <h2>スケールアップ</h2>
+          <p>小さい状態から拡大しながら登場します。</p>
+        </div>
+  
+        <div class="box rotate js-inview" data-root-margin="100px">
+          <h2>回転フェードイン</h2>
+          <p>回転しながらフェードインします。</p>
+        </div>
+  
+        <div class="box zoom js-inview" data-root-margin="0px">
+          <h2>ズームイン</h2>
+          <p>大きい状態から通常サイズに縮小しながらフェードインします。</p>
+        </div>
+  
+        <div class="box flip js-inview" data-root-margin="0px">
+          <h2>3D フリップ</h2>
+          <p>Y軸を中心に回転しながら登場します。</p>
+        </div>
+  
+        <div class="box blur js-inview" data-root-margin="0px">
+          <h2>ブラー効果</h2>
+          <p>ぼかしエフェクトから徐々にフォーカスが合いながらフェードインします。</p>
+        </div>
+  
+        <div class="box bounce js-inview" data-root-margin="0px">
+          <h2>バウンス</h2>
+          <p>弾むような動きで登場します。</p>
+        </div>
+      </section>
+  
+      <section class="section">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem; color: #667eea;">
+          グリッドレイアウト
+        </h2>
+        <div class="grid">
+          <div class="card fadeup js-inview" data-root-margin="0px">
+            <h3>カード 1</h3>
+            <p>複数の要素を順番にアニメーションさせることができます。</p>
+          </div>
+          <div class="card fadeup js-inview" data-root-margin="0px">
+            <h3>カード 2</h3>
+            <p>CSSのtransition-delayを使って時間差を演出しています。</p>
+          </div>
+          <div class="card fadeup js-inview" data-root-margin="0px">
+            <h3>カード 3</h3>
+            <p>視覚的なリズムが生まれ、より洗練された印象になります。</p>
+          </div>
+          <div class="card fadeup js-inview" data-root-margin="0px">
+            <h3>カード 4</h3>
+            <p>IntersectionObserverは複数の要素を効率的に監視できます。</p>
+          </div>
+          <div class="card fadeup js-inview" data-root-margin="0px">
+            <h3>カード 5</h3>
+            <p>各カードのtransition-delayを調整することで波のような動きを作れます。</p>
+          </div>
+          <div class="card fadeup js-inview" data-root-margin="0px">
+            <h3>カード 6</h3>
+            <p>最後のカードまで到達すると、全体のアニメーションが完了します。</p>
+          </div>
+        </div>
+      </section>
     </div>
-</section>
+  
+  </body>
