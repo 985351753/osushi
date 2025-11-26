@@ -1,16 +1,16 @@
-<section class="menu__contents">
-<div class="menu__contents-group">
-    <div class="menu__nav toc fadeUpTrigger">
+<div class="menu__contents">
+    <div class="menu__nav toc js-fadeUpTrigger">
         <a href="#lunch" class="menu__nav-item">昼の料理<span class="menu__nav-item-span"></span></a>
         <a href="#dinner" class="menu__nav-item">夜の料理<span class="menu__nav-item-span"></span></a>
         <a href="#drink" class="menu__nav-item">お飲み物<span class="menu__nav-item-span"></span></a>
         <a href="#course" class="menu__nav-item">コース<span class="menu__nav-item-span"></span></a>
     </div><!-- .menu__nav -->
-    <div id="lunch">
-        <h2 class="menu__contents-heading rl-text fadeUpTrigger">昼の料理</h2>
-        <p class="menu__contents-text fadeUpTrigger">11:00～14:00の間、当店はランチタイムの営業を行っております。<br>
+    <div class="menu__group">
+        <div id="lunch"></div>
+        <h2 class="menu__contents-heading rl-text js-fadeUpTrigger">昼の料理</h2>
+        <p class="menu__contents-text js-fadeUpTrigger">11:00～14:00の間、当店はランチタイムの営業を行っております。<br>
         お仕事の合間やランチタイムに、ぜひお気軽にお立ち寄りください。</p>
-        <div class="lunch__contents fadeUpTrigger">
+        <div class="lunch__contents js-fadeUpTrigger">
             <div class="lunch__contents-item">
                 <img src="images/lunch.jpeg" alt="海鮮丼">
                 <div class="lunch__contents-text">
@@ -30,12 +30,13 @@
                 </div>
             </div>
         </div>
-    </div><!-- .lunch -->
-    <div id="dinner">
-        <h2 class="menu__contents-heading rl-text fadeUpTrigger">夜の料理</h2>
-        <p class="menu__contents-text fadeUpTrigger">
+    </div>
+    <div class="menu__group">
+        <div id="dinner"></div>
+        <h2 class="menu__contents-heading rl-text js-fadeUpTrigger">夜の料理</h2>
+        <p class="menu__contents-text js-fadeUpTrigger">
         鮮度抜群のマグロを使用した中トロや大トロの寿司をはじめ、<br>ウニ、サーモンなど定番のネタから、季節限定のネタまで取り揃えております。</p>
-        <div class="dinner__contents fadeUpTrigger">
+        <div class="dinner__contents js-fadeUpTrigger">
             <div class="dinner__contents-item__large">
                 <img src="images/maguro.jpg" alt="まぐろ">
                 <div class="dinner__contents-text">
@@ -49,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div class="dinner__contents fadeUpTrigger">
+        <div class="dinner__contents js-fadeUpTrigger">
             <div class="dinner__contents-item__small">
                 <img src="images/maguro.jpg" alt="まぐろ">
                 <div class="dinner__contents-text">
@@ -69,11 +70,12 @@
                 </div>
             </div>
         </div>
-    </div><!-- .dinner -->
-    <div id="drink">
-        <h2 class="menu__contents-heading rl-text fadeUpTrigger">お飲み物</h2>
-        <p class="menu__contents-text fadeUpTrigger">お客様のお好みに合わせた飲み物のペアリングも可能です。<br>日本酒やワイン、ビールなど、豊富なドリンクメニューと共に、<br>当店自慢の料理をお楽しみください。</p>
-        <div class="drink__contents fadeUpTrigger">
+    </div>
+    <div class="menu__group">
+        <div id="drink"></div>
+        <h2 class="menu__contents-heading rl-text js-fadeUpTrigger">お飲み物</h2>
+        <p class="menu__contents-text js-fadeUpTrigger">お客様のお好みに合わせた飲み物のペアリングも可能です。<br>日本酒やワイン、ビールなど、豊富なドリンクメニューと共に、<br>当店自慢の料理をお楽しみください。</p>
+        <div class="drink__contents js-fadeUpTrigger">
             <div class="drink__contents-item">
                 <h3 class="drink__contents-item-heading">地酒</h3>
                 <dl class="drink__list">
@@ -156,16 +158,17 @@
 
             </div>
         </div>
-    </div><!-- .drink -->
-    <div id="course">
-        <h2 class="menu__contents-heading rl-text fadeUpTrigger">コース</h2>
+    </div>
+    <div class="menu__group">
+        <div id="course"></div>
+        <h2 class="menu__contents-heading rl-text js-fadeUpTrigger">コース</h2>
         <div class="course__contents">
-            <img src="images/coursebg.png" alt="コース料理" class="course__contents-img fadeUpTrigger">
-            <div class="course__contents-item fadeUpTrigger">
+            <img src="images/coursebg.png" alt="コース料理" class="course__contents-img js-fadeUpTrigger">
+            <div class="course__contents-item js-fadeUpTrigger">
                 <p>旬の食材をふんだんに使用し、職人の手仕事による握り寿司を中心に、前菜や揚げ物、煮物など多彩な料理が楽しめます。</p>
                 <small>※アレルギー等はご予約時にお知らせください</small>
                 <div class="course__contents-item-menu">
-                    <p class="course__contents-item-menu-text">
+                    <p class="course__contents-item-text">
                         <span class="course__contents-menu-span">＜おまかせコース＞</span>
                         <span class="course__contents-menu-span">16,000円</span>
                         <br>
@@ -179,6 +182,5 @@
                 </div>
             </div>
         </div>
-    </div><!-- .course -->
     </div>
-</section>
+    </div>

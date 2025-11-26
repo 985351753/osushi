@@ -5,8 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 
-const ham = $('.header__menu-button');
-const nav = $('.header__nav');
+const ham = $('.js-hamburger-button');
+const nav = $('.js-header__nav');
 var state = false;
 var scrollpos;
 ham.on('click', function () {
@@ -23,7 +23,7 @@ ham.on('click', function () {
   }
 });//スクロール固定
 
-const a = $('.footerlink a');
+const a = $('.js-footerlink');
 a.on ('click', function() {
 ham.toggleClass('active');
 nav.toggleClass('active');
@@ -47,7 +47,7 @@ $(function(){
 
   function fadeAnime(){
 
-  $('.fadeUpTrigger').each(function(){
+  $('.js-fadeUpTrigger').each(function(){
     var elemPos = $(this).offset().top-0;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
@@ -56,7 +56,7 @@ $(function(){
     }
   });//.fadeUpTrigger
 
-  $('.fadeRightTrigger').each(function(){
+  $('.js-fadeRightTrigger').each(function(){
     var elemPos = $(this).offset().top-0;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
@@ -65,7 +65,7 @@ $(function(){
     }
   });//.fadeRightTrigger
 
-  $('.blurTrigger').each(function(){
+  $('.js-blurTrigger').each(function(){
     var elemPos = $(this).offset().top-0;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
@@ -83,16 +83,16 @@ $(window).on('load', function () {
   fadeAnime();
 });
 
-gsap.utils.toArray(".title").forEach((title) => {
+gsap.utils.toArray(".js-title").forEach((title) => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: title,
       start: "top 80%", 
-      markers: true
+      markers: false
     }
   });
 
-  gsap.utils.toArray(title.querySelectorAll(".appears")).forEach((el, i) => {
+  gsap.utils.toArray(title.querySelectorAll(".js-appears")).forEach((el, i) => {
   tl.from(el, {
     opacity: 0,
     y: 40,
@@ -102,22 +102,22 @@ gsap.utils.toArray(".title").forEach((title) => {
   }, "<");
   });
   
-  tl.from(title.querySelector(".text"), { opacity: 0, y: 40, duration: 1, ease: "power3.out" })
-    .from(title.querySelector(".thumb"), { opacity: 0, y: 40, duration: 1 }, "-=0.8")
-    .from(title.querySelector(".button"), { opacity: 0, y: 40, duration: 0.5 }, "-=1");
+  tl.from(title.querySelector(".js-text"), { opacity: 0, y: 40, duration: 1, ease: "power3.out" })
+    .from(title.querySelector(".js-thumb"), { opacity: 0, y: 40, duration: 1 }, "-=0.8")
+    .from(title.querySelector(".js-button"), { opacity: 0, y: 40, duration: 0.5 }, "-=1");
 });
 
 
 function PageTopAnime() {
   var scroll = $(window).scrollTop();
   if (scroll >= 300){
-    $('.appBtn').removeClass('RightMove');
-    $('.appBtn').addClass('LeftMove');
+    $('.js-header__sidenav').removeClass('RightMove');
+    $('.js-header__sidenav').addClass('LeftMove');
   }else{
     if(
-      $('.appBtn').hasClass('LeftMove')){
-      $('.appBtn').removeClass('LeftMove');
-      $('.appBtn').addClass('RightMove');
+      $('.js-header__sidenav').hasClass('LeftMove')){
+      $('.js-header__sidenav').removeClass('LeftMove');
+      $('.js-header__sidenav').addClass('RightMove');
     }
   }
 }
@@ -146,3 +146,33 @@ if(ua.indexOf("iPhone") === -1 && ua.indexOf("Android") === -1) {
       e.preverntDefault();
     });
 }/* tel */
+
+class InView {
+  constructor(elTarget) {
+    this.elTarget = elTarget;
+    this._setEventListeners();
+  }
+
+  _setEventListeners() {
+    setTimeout(() => {
+      const rootMargin = this.elTarget.dataset.rootMargin || '0px';
+      const iObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.elTarget.classList.add('is-active');
+              iObserver.unobserve(this.elTarget);
+            }
+          });
+        },
+        { rootMargin: rootMargin }
+      );
+      iObserver.observe(this.elTarget);
+    }, 500);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.js-inview');
+  elements.forEach(element => new InView(element));
+});

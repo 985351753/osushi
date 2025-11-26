@@ -1,6 +1,6 @@
 .menu__head-img {
     width: 100%;
-    height: 500px;
+    height: calc(var(--spacing) * 125);
     background-image: url(../images/menutop.jpg);
     background-size: cover;
     background-position: center;
@@ -11,7 +11,7 @@
 .menu__head-title {
     position: absolute;
     z-index: 1;
-    top: 220px;
+    top: calc(var(--spacing) * 55);
     left: 50%;
 }
 .menu__head-title-text {
@@ -19,22 +19,21 @@
     transform: translateX(-50%);
 }
 
-
 @media screen and (max-width:768px) {
-.menu__head-img {
-    height: 300px;
-}
+    .menu__head-img {
+        height: calc(var(--spacing) * 75);
+    }
 
-.menu__head-title {
-    top: 140px;
-}
-.menu__head-title {
-    left: calc((100vw - 210px) / 2);
-}
-.menu__head-title-text {
-    width: 210px;
-    text-align: center;
-    transform: translateX(0%);
-}
+    .menu__head-title {
+        top: calc(var(--spacing) * 35);
+    }
+    .menu__head-title {
+        left: calc((100vw - 210px) / 2);
+    }
+    .menu__head-title-text {
+        width: 210px;
+        text-align: center;
+        transform: translateX(0%);
+    }
 
 }

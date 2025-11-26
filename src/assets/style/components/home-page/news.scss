@@ -1,69 +1,64 @@
 .news {
-    width: 800px;
+    max-width: calc(var(--spacing) * 200);
+    margin: calc(var(--spacing) * 40) auto;
     height: auto;
-    margin: 0 auto;
-    padding: 180px 0;
     position: relative;
 }
 .news__heading {
-    padding-bottom: 80px;
+    margin-bottom: calc(var(--spacing) * 20);
     text-align: center;
     position: relative;
 }
 .news__unit {
-    padding: 20px 10px;
+    padding: calc(var(--spacing) *  5) calc(var(--spacing) * 3);
     position: relative;
     border-top: 1px rgba(150,150,150,0.5) solid;
-}
-.news__unit:last-child {
-    border-bottom: 1px rgba(150,150,150,0.5) solid;
-}
-.news__unit:hover {
-    background: rgba(137, 22, 45, 0.5);
-}
-.news__unit::before {
-    content: "";
-    position: absolute;
-    top: 40%;
-    right: 5px;
-    width: 35px;
-    height: 10px;
-    color: #eee;
-    transition: all .2s linear;
-    border-width: 0 1px 1px 0;
-    border-bottom: 1px solid #eee;
-    border-right: 1px solid #eee;
-    -webkit-transform: skew(45deg);
-    transform: skew(45deg);
-}
-.news__unit:hover::before {
-    right: -10px;
+    &:last-child {
+        border-bottom: 1px rgba(150,150,150,0.5) solid;
+    }
+    &:hover {
+        background: rgba(137, 22, 45, 0.5);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 40%;
+        right: 5px;
+        width: 35px;
+        height: 10px;
+        color: #eee;
+        transition: all .2s linear;
+        border-width: 0 1px 1px 0;
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #eee;
+        -webkit-transform: skew(45deg);
+        transform: skew(45deg);
+    }
+    &:hover::before {
+        right: -10px;
+    }
 }
 .news__unit-link {
     position: relative;
     display: block;
-    padding-right: 40px;
+    padding-right: calc(var(--spacing) * 10);
+    font-size: var(--text-lg);
 }
 .news__unit-text {
-    font-size: .875rem;
-    margin-right: 10px;
+    font-size: var(--text-sm);
+    margin-bottom: var(--spacing);
 }
 @media screen and (max-width:768px) {
     .news {
-        width: 90%;
-        padding: 100px 0 180px;
+        width: calc(100% - var(--LAYOUT-MARGIN-INLINE) * 2);
+        margin: calc(var(--spacing) * 30) auto;
         display: block;
     }
     .news__heading {
-        width: auto;
-        padding-top: 0;
-        padding-right: 0;
-        padding-bottom: 40px;
-        margin: 0 auto;
+        margin-bottom: calc(var(--spacing) * 15);
     }
     .news__unit {
         display: flex;
         flex-direction: column;
-        padding-bottom: 20px;
     }
 }
